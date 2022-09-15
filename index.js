@@ -1,21 +1,17 @@
-function FindIntersection(strArr) {
-    let a = strArr[0].split(',');
-    let b = strArr[1].split(',');
-    let resultado='';
-    a.map(e => {
-      b.map(f => {
-        if (e.trim() === f.trim())
-          resultado += f;
-      })
-    })
+function CodelandUsernameValidation(str) {
+  let resultado = false;
+  var expre = new RegExp("^[A-Z a-z][0-9A-Za-z/_]{2,23}[0-9A-Za-z]{1}$")
 
-    if(resultado)
-   {return resultado.trim().split(' ').join(',');}
-
-
-   return false;
-   
+  if ( expre.test(str)) {
+    resultado=true;
   }
+  return resultado;
+}
   
   // keep this function call here 
-  console.log(FindIntersection(["1, 2, 3, 4, 5", "6, 7, 8, 9, 10"]));
+  console.log(CodelandUsernameValidation("uh"));
+
+  // ********* Links de investigacion *************
+  // http://w3.unpocodetodo.info/utiles/regex-en-javascript.php
+  // https://code.tutsplus.com/es/tutorials/8-regular-expressions-you-should-know--net-6149
+  // https://www.adictosaltrabajo.com/2015/01/29/regexsam/
