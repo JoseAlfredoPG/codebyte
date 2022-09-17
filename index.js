@@ -1,23 +1,17 @@
-function LongestWord(sen) {
-  var rex = /[a-z0-9]+/gi;
-  let n = sen.match(rex);
-  let anterior = 0;
-  let indice = 0;
-
-  n.map((item, index) => {
-    if (item.length >anterior) {
-      anterior = item.length;
-      indice = index;
-    }
-  })
-
-  return n[indice];
+function FirstFactorial(num) { 
+  let res=1;
+  // code goes here
+  for(x=1;x<num;x++)
+  {
+    res=res*(x+1)
+  } 
+  num=res;
+  return num; 
 
 }
 
 
 // keep this function call here 
-console.log(QuestionsMarks("hello world"));
+console.log(QuestionsMarks(4));
 
 //***************Links de investigacion****************
-// http://w3.unpocodetodo.info/utiles/regex-en-javascript.php
